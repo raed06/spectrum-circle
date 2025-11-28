@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpectrumCircle</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Avatar Sidebar -->
+        <div class="avatar-sidebar">
+            <div class="avatar-container">
+                <div id="avatarDisplay" class="avatar-display">
+                </div>
+            </div>
+            <div class="agent-name-display">
+                <div class="agent-name-large" id="agentNameLarge">SpectrumCircle</div>
+                <div class="agent-role-large" id="agentRoleLarge">Your Support Community</div>
+            </div>
+            <div class="agent-status">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">Ready to help</span>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-area">
+            <div class="header">
+                <h1>🤝 SpectrumCircle</h1>
+                <p>Your personal support community</p>
+            </div>
+
+            <!-- Agent Selection Bar -->
+            <div class="agents-bar" id="agentsBar">
+                <button class="agent-avatar active" data-rol="individual">
+                    <div class="agent-emoji">👤</div>
+                    <div class="agent-name">Me</div>
+                </button>
+                <button class="agent-avatar" data-rol="parent">
+                    <div class="agent-emoji">👪</div>
+                    <div class="agent-name">Parent</div>
+                </button>
+                <button class="agent-avatar" data-rol="sibling">
+                    <div class="agent-emoji">🎮</div>
+                    <div class="agent-name">Sibling</div>
+                </button>
+            </div>
+
+            <div class="emotion-selector">
+                <span class="emotion-label">How are you feeling?</span>
+                <button class="emotion-btn active" data-emotion="calm">😌 Calm</button>
+                <button class="emotion-btn" data-emotion="happy">😊 Happy</button>
+                <button class="emotion-btn" data-emotion="anxious">😰 Anxious</button>
+                <button class="emotion-btn" data-emotion="overwhelmed">😵 Overwhelmed</button>
+                <button class="emotion-btn" data-emotion="sad">😢 Sad</button>
+            </div>
+
+            <div class="age-selector">
+                <span class="emotion-label">Age:</span>
+                <input type="number" id="ageInput" class="age-input" placeholder="Age" min="1" max="120">
+            </div>
+
+            <div class="chat-area" id="chatArea">
+                <div class="system-message">
+                    💙 Welcome! Your support circle is here. How can we help today?
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="messageInput" placeholder="Type your message..." autocomplete="off">
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/script.js"></script>
+</body>
+
+</html>
