@@ -4,9 +4,7 @@
 
 SpectrumCircle is a comprehensive multi-agent AI system that provides personalized, empathetic support through specialized virtual agents, each with unique expertise and personas. The system leverages advanced AI capabilities including LLM-powered routing, dual-memory architecture, crisis intervention protocols, and real-time observability.
 
-<div align="center">
-<img src="./images/app.png" alt="App" width="900">
-</div>
+[![A video showing about SpectrumCircle](https://img.youtube.com/vi/reBsjMzcwiM/hqdefault.jpg)](https://www.youtube.com/watch?v=reBsjMzcwiM)
 ---
 
 ## 📋 Table of Contents
@@ -1071,6 +1069,9 @@ npx serve frontend
 Navigate to `http://localhost:8080`
 
 ---
+
+### Showcase: 
+[![A video showing how to use SpectrumCircle](https://img.youtube.com/vi/zsuSKUTDSfE/hqdefault.jpg)](https://www.youtube.com/watch?v=zsuSKUTDSfE)
 
 ## 🧪 Testing
 
