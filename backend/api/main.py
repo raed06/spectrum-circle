@@ -24,8 +24,32 @@ from backend.utils.config import get_settings
 # FastAPI app initialization
 app = FastAPI(
     title="SpectrumCircle API",
-    description="AI-powered support community for autism and neurodiversity.",
-    version="1.0.0"
+    description="""
+        ## AI-powered support system for the autism and neurodiversity community 💙
+
+        ### Available Endpoints
+
+        - **Profiles** — Create and retrieve user profiles with sensory and communication preferences
+        - **Chat** — Real-time WebSocket chat with specialized AI agents
+        - **Stats** — User progress metrics and conversation summaries
+
+        ### Interactive Docs
+        - Swagger UI: [`/docs`](http://localhost:8000/docs)
+        - ReDoc: [`/redoc`](http://localhost:8000/redoc)
+
+        ### Notes
+        - WebSocket chat requires an active user profile
+        - All agents follow safe messaging guidelines for crisis situations
+    """,
+    version="1.0.0",
+    contact={
+        "name": "raed06",
+        "url": "https://github.com/raed06/spectrum-circle",
+    },
+    license_info={
+        "name": "MIT",
+        "url": "https://github.com/raed06/spectrum-circle/blob/main/LICENSE",
+    },
 )
 
 # CORS middleware setup
@@ -66,7 +90,7 @@ class MessageRequest(BaseModel):
 
 
 # API Endpoints (REST)
-@app.get("/")
+@app.get("/", tags=["Health"])
 async def root():
     """Returns the API health status and version information."""
     return {
@@ -76,7 +100,7 @@ async def root():
     }
 
 # Profile Management
-@app.post("/profiles")
+@app.post("/profiles", tags=["Profiles"])
 async def create_profile(profile_data: UserProfileCreate):
     """Creates a new user profile in the database."""
     try:
@@ -99,7 +123,7 @@ async def create_profile(profile_data: UserProfileCreate):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.get("/profiles/{user_id}")
+@app.get("/profiles/{user_id}", tags=["Profiles"])
 async def get_profile(user_id: str):
     """Retrieves an existing user profile."""
     profile = profile_manager.get_profile(user_id)
@@ -113,7 +137,7 @@ async def get_profile(user_id: str):
     }
 
 # User Statistics
-@app.get("/stats/{user_id}")
+@app.get("/stats/{user_id}", tags=["Stats"])
 async def get_user_stats(user_id: str):
     """Retrieves aggregated statistics and progress metrics for a user."""
     try:

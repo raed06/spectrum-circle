@@ -4,6 +4,11 @@
 
 SpectrumCircle is a comprehensive multi-agent AI system that provides personalized, empathetic support through specialized virtual agents, each with unique expertise and personas. The system leverages advanced AI capabilities including LLM-powered routing, dual-memory architecture, crisis intervention protocols, and real-time observability.
 
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.11-green.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Neurodiversity Affirming](https://img.shields.io/badge/Neurodiversity-Affirming%20💙-blueviolet.svg)
+
 [![A video showing about SpectrumCircle](https://img.youtube.com/vi/reBsjMzcwiM/hqdefault.jpg)](https://www.youtube.com/watch?v=reBsjMzcwiM)
 ---
 
@@ -488,19 +493,39 @@ Execute all cells in sequence:
 
 ## 🛠️ Technologies & Frameworks
 
-### Core Technologies
+### Core
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.121.2-009688?logo=fastapi&logoColor=white)
+![Uvicorn](https://img.shields.io/badge/Uvicorn-0.38.0-499848?logo=gunicorn&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-2.12.4-E92063?logo=pydantic&logoColor=white)
+![WebSockets](https://img.shields.io/badge/WebSockets-15.0.1-010101?logo=socketdotio&logoColor=white)
 
-| Category | Technology | Purpose |
-|----------|-----------|---------|
-| **LLM Provider** | Google Gemini API | Primary language model (gemini-2.5-flash) |
-| **Backend Framework** | FastAPI | REST API & WebSocket server |
-| **Frontend** | HTML/CSS/JavaScript | Real-time chat interface |
-| **Vector Database** | ChromaDB | Semantic search for long-term memory |
-| **SQL Database** | PostgreSQL | User profiles & structured data |
-| **Agent Protocol** | MCP (Model Context Protocol) | Crisis management tooling |
-| **Search API** | Tavily | Live crisis resource discovery |
-| **Observability** | Langfuse + OpenInference | Tracing, logging, metrics |
-| **Logging** | Loguru | Structured application logs |
+### AI & LLMs
+![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?logo=openai&logoColor=white)
+![Anthropic](https://img.shields.io/badge/Anthropic-Claude-191919?logo=anthropic&logoColor=white)
+![Google Generative AI](https://img.shields.io/badge/Google%20Generative%20AI-0.8.5-4285F4?logo=google&logoColor=white)
+![Transformers](https://img.shields.io/badge/Transformers-4.57.1-FFD21E?logo=huggingface&logoColor=black)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.9.1-EE4C2C?logo=pytorch&logoColor=white)
+![PEFT](https://img.shields.io/badge/PEFT%20LoRA-0.18.0-FFD21E?logo=huggingface&logoColor=black)
+
+### Vector Store & Embeddings
+![ChromaDB](https://img.shields.io/badge/ChromaDB-1.3.5-FF6B35?logo=databricks&logoColor=white)
+![Sentence Transformers](https://img.shields.io/badge/Sentence%20Transformers-5.1.2-FFD21E?logo=huggingface&logoColor=black)
+
+### Database & Storage
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0.44-D71F00?logo=sqlalchemy&logoColor=white)
+![Alembic](https://img.shields.io/badge/Alembic-1.17.2-6BA81E?logo=alembic&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-7.0.1-FF4438?logo=redis&logoColor=white)
+
+### MLOps & Observability
+![Langfuse](https://img.shields.io/badge/Langfuse-3.10.1-000000?logo=langfuse&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-3.6.0-0194E2?logo=mlflow&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1.38.0-425CC7?logo=opentelemetry&logoColor=white)
+
+### Infrastructure
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI-2088FF?logo=githubactions&logoColor=white)
 
 ### Python Dependencies
 
@@ -1204,6 +1229,13 @@ spectrum-circle/
 ---
 
 ## 📡 API Documentation
+
+Once the server is running, interactive API docs are available at:
+
+| Interface | URL | Description |
+|-----------|-----|-------------|
+| Swagger UI | [`http://localhost:8000/docs`](http://localhost:8000/docs) | Interactive — try endpoints directly from the browser |
+| ReDoc | [`http://localhost:8000/redoc`](http://localhost:8000/redoc) | Clean read-only reference |
 
 ### REST Endpoints
 
