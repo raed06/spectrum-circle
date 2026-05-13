@@ -1355,7 +1355,8 @@ This project is designed for autism support. Contributions should prioritize:
 
 ## 📄 License
 
-This project is for educational and research purposes.
+This project is distributed under the license specified in the `LICENSE` file.  
+See the [`LICENSE`](./LICENSE) file for more information.
 
 ---
 
